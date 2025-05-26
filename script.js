@@ -1,8 +1,20 @@
 var allElems = document.querySelectorAll('.elem');
-var fullelem = document.querySelectorAll('.fullelem');
+var fullelempage = document.querySelectorAll('.fullelem');
+var fullelempageBackBtn = document.querySelectorAll('.fullelem .back');
 
 allElems.forEach(function(elem) {
     elem.addEventListener('click', function() {
-        fullelem[elem.id].style.display = 'block';
+        fullelempage[elem.id].style.display = 'block';
     });
 });
+
+fullelempageBackBtn.forEach(function(back){
+    back.addEventListener('click',function(){
+         fullelempage[back.id].style.display = 'none';
+    })
+});
+
+
+
+
+// function open
