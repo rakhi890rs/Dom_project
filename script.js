@@ -18,3 +18,8 @@ fullelempageBackBtn.forEach(function(back){
 
 
 // function open
+
+
+var form=document.querySelector('.addTask form')
+console.log(form);
+

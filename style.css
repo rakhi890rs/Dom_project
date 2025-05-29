@@ -3,6 +3,7 @@
     --sec:#240f01;
     --tri1:#FEBA17;
     --tri2:#74512D;
+    --red:red;
 }
 @font-face {
     font-family: 'aeonik';
@@ -83,14 +84,13 @@ section.allElems{
     width: 100%;
     background-color: #381c0a;
     padding: 40px;
-    /* font-size: 100px; */
     display: none;
     position: absolute;
 } 
 .back{
     position: absolute;
     right: 5%;
-    background-color: red;
+    background-color: var(--red);
     padding: 15px 20px;
     border-radius: 10%;
     font-size: 24px;
@@ -109,7 +109,6 @@ section.allElems{
     height: 80%;
     width: 100%;
     margin-top: 40px;
-    /* background-color: var(--tri2); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,36 +129,27 @@ section.allElems{
 .todo-list-fullpage .todo-containner .addTask form{
     display: flex;
    flex-direction: column;
-   align-self: start;
+   align-self: flex-start;
    padding: 30px;
 }
 .todo-containner .addTask form input{
     padding: 10px 25px;
     width: 100%;
-    /* height: 100%; */
     font-size: 28px;
-    background-color: var(--sec);
+    background-color: var(--pri);
+    color: var(--sec);
     border-radius: 5px;
     border: none;
     outline: none;
     margin-bottom: 20%;
 }
-/* .todo-containner .addTask form textarea{
-    padding: 10px 25px;
-    width: 100%;
-    font-size: 28px;
-    background-color: var(--sec);
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    margin-bottom: 18%;
-} */
  .todo-containner .addTask form textarea {
     padding: 10px 25px;
     width: 100%;
-    height: 100px; /* <- adjust as needed */
+    height: 100px; 
     font-size: 22px;
-    background-color: var(--sec);
+     background-color: var(--pri);
+    color: var(--sec);
     border-radius: 5px;
     border: none;
     outline: none;
@@ -182,3 +172,38 @@ section.allElems{
 .todo-containner .addTask form button:active{
     scale: 0.96em;
 }
+.todo-list-fullpage .todo-containner .allTask{
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+.task{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.task h5{
+    color: var(--sec);
+    font-size: 30px;
+}
+.task button{
+    padding: 15px 30px;
+    color: var(--pri);
+    background-color: green;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+
