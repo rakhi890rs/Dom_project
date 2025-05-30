@@ -1,3 +1,4 @@
+function openFeatures(){
 var allElems = document.querySelectorAll('.elem');
 var fullelempage = document.querySelectorAll('.fullelem');
 var fullelempageBackBtn = document.querySelectorAll('.fullelem .back');
@@ -13,13 +14,17 @@ fullelempageBackBtn.forEach(function(back){
          fullelempage[back.id].style.display = 'none';
     })
 });
+}
+openFeatures();
 
 
 
-
-// function open
-
-
-var form=document.querySelector('.addTask form')
-console.log(form);
+let form=document.querySelector('.addTask form')
+let taskInput=document.querySelector('.addTask form input')
+let taskDetailsInput=document.querySelector('.addTask form textarea')
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+    
+    console.log(taskInput.value)
+})
 
